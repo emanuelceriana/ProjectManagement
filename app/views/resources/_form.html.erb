@@ -1,0 +1,59 @@
+<%= form_for(@resource, url: local_assigns[:url]) do |f| %>
+
+  <div class="field is-horizontal is-narrow">
+    <div class="field-label is-normal">
+      <label class="label">Nombre </label>
+    </div>
+  </div>
+
+  <div class="field is-horizontal is-narrow">
+    <div class="field-body">
+      <div class="field">
+        <p class="control is-expanded">
+          <%= f.text_field :name, class: 'input', placeholder: "Nombre" %>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="field is-horizontal is-narrow">
+    <div class="field-label is-normal">
+      <label class="label">Cantidad </label>
+    </div>
+  </div>
+
+  <div class="field is-horizontal is-narrow">
+    <div class="field-body">
+      <div class="field">
+        <p class="control is-expanded">
+          <%= f.number_field :quantity, class: 'input', placeholder: "Cantidad" %>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="field is-horizontal is-narrow">
+    <div class="field-label is-normal">
+      <label class="label">Precio </label>
+    </div>
+  </div>
+
+  <div class="field is-horizontal is-narrow">
+    <div class="field-body">
+      <div class="field">
+        <p class="control is-expanded">
+          <%= f.number_field :price, class: 'input', placeholder: "Precio" %>
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <br>
+
+  <div class="field is-grouped">
+    <div class="control">
+      <%= f.submit yield(:button_text), class: "button is-dark" %>
+    </div>
+  </div>
+
+<% end %>
